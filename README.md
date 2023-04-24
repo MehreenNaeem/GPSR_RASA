@@ -17,5 +17,6 @@ Try to add synonyms of the word first without enttites and then make examples us
     - search
     - find the [colour]{"entity": "colours"} [object]{"entity": "object"} in the [rm]{"entity": "room"}
     - search for the[person]{"entity": "person"} [gesture]{"entity": "gestures"} her hand at the [location]{"entity": "location"}
+´´´
 
 
