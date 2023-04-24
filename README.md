@@ -10,7 +10,7 @@ you can add data by making changes in data/nlu.yml and domain.yml
 add intent: (title of the plan) in data/nlu.yml. Then add some examples.
 Try to add synonyms of the word first without enttites and then make examples using entities (To avoid data biasing)
 
-- intent: search
+´´´- intent: search
   examples: |
     - find
     - search
