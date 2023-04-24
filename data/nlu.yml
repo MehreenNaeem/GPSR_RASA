@@ -1,0 +1,392 @@
+version: "3.1"
+
+nlu:
+- intent: fetch
+  examples: |
+    - pick
+    - fetch
+    - get
+    - grasp
+    - take
+    - retieve
+    - pickup [object category]{"entity": "object category"} from [location]{"entity": "location"} located in a [rm]{"entity": "room"}
+    - fetch [colour]{"entity": "colours"} [object]{"entity": "object"} placed on the [location]{"entity": "location"} in [rm]{"entity": "room"}
+    - get the [object category]{"entity": "object category"} from [location]{"entity": "location"} in [rm]{"entity": "room"}
+    - grasp at least [number]{"entity": "number"} [object category]{"entity": "object category"} from [person name]{"entity": "person name"} in [rm]{"entity": "room"}
+    - grasp the [attribute]{"entity": "attributes"} [object]{"entity": "object"}
+    - take a [object]{"entity": "object"} from the [location]{"entity": "location"} 
+    - pick [number]{"entity": "number"} minimum [object]{"entity": "object"} from [location]{"entity": "location"}
+    - retrieve [object category]{"entity": "object category"}
+    - take [object]{"entity": "object"} from the [location]{"entity": "location"}
+    - take the [object category]{"entity": "object category"}
+
+- intent: deliver
+  examples: |
+    - give
+    - provide
+    - drop
+    - put
+    - place
+    - set
+    - handover
+    - hand
+    - deliver
+    - give [object category]{"entity": "object category"} to [person]{"entity": "person"}
+    - provide [attribute]{"entity": "attributes"} [object]{"entity": "object"} to [person name]{"entity": "person name"}
+    - drop [object]{"entity": "object"} on the [location]{"entity": "location"}
+    - put [object]{"entity": "object"} in the [rm]{"entity": "room"}
+    - place [object category]{"entity": "object category"} on the [location]{"entity": "location"}
+    - set a [object]{"entity": "object"} near to the [location]{"entity": "location"}
+    - handover maximum [number]{"entity": "number"} [object category]{"entity": "object category"} from [location]{"entity": "location"} to [person]{"entity": "person"}
+    - hand [person]{"entity": "person"} some [object]{"entity": "object"} in a [object]{"entity": "object"}
+    - deliver a [colour]{"entity": "colours"} [object]{"entity": "object"} to [person name]{"entity": "person name"}
+
+- intent: transport
+  examples: |
+    - bring
+    - transport
+    - retrive
+    - bring some [objects]{"entity": "object"} to the [person name]{"entity": "person name"} in a [rm]{"entity": "room"}
+    - bring the [containers]{"entity": "object category"} to the [person]{"entity": "person"}
+    - transport [colour]{"entity": "colours"} [object]{"entity": "object"} from [location]{"entity": "location"} to [location]{"entity": "location"} in a [rm]{"entity": "room"}
+
+- intent: guide
+  examples: |
+    - guide
+    - accompany
+    - escort
+    - assist
+    - take
+    - guide [person]{"entity": "person"} towards [rm]{"entity": "room"} 
+    - accompany [person]{"entity": "person"} [gesture]{"entity": "gestures"} in a [rm]{"entity": "room"} to the [location]{"entity": "location"}
+    - escort [person]{"entity": "person"} [gesture]{"entity": "gestures"} to the [rm]{"entity": "room"}
+    - assist [attribute]{"entity": "attributes"} [person]{"entity": "person"} to the [rm]{"entity": "room"}
+    - take [person name]{"entity": "person name"} to the [location]{"entity": "location"}
+    - take [person]{"entity": "person"} to the [rm]{"entity": "room"}
+
+- intent: follow
+  examples: |
+    - follow
+    - follow [person]{"entity": "person"} from the [location]{"entity": "location"}
+    - go with [person name]{"entity": "person name"} to the [location]{"entity": "location"}
+    - go along with [person name]{"entity": "person name"} to the [location]{"entity": "location"}
+
+- intent: navigate
+  examples: |
+    - navigate
+    - go
+    - move
+    - walk
+    - travel
+    - navigate to the [rm]{"entity": "room"}
+    - go to the [rm]{"entity": "room"}
+    - move to the [location]{"entity": "location"}
+    - walk towards [location]{"entity": "location"}
+    - travel to the [rm]{"entity": "room"}
+
+- intent: search
+  examples: |
+    - find
+    - search
+    - look
+    - locate
+    - hunt
+    - spot
+    - check
+    - find the [colour]{"entity": "colours"} [object]{"entity": "object"} in the [rm]{"entity": "room"}
+    - search for the [attribute]{"entity": "attributes"} [person]{"entity": "person"} [gesture]{"entity": "gestures"} her hand at the [location]{"entity": "location"}
+    - look for the [person]{"entity": "person"} in the [room]{"entity": "room"}
+    - locate a [attribute]{"entity": "attributes"} [object]{"entity": "object"} on the [location]{"entity": "location"}
+    - hunt for a [object]{"entity": "object"} in the [location]{"entity": "location"}
+    - spot the [object]{"entity": "object"} on the [location]{"entity": "location"}
+    - check where is [person name]{"entity": "person name"} in the [rm]{"entity": "room"}
+    - retrieve [attribute]{"entity": "attributes"} [location]{"entity": "object"} from the [location]{"entity": "location"} to [person]{"entity": "person"}
+    - spot the [object]{"entity": "object"} in the [rm]{"entity": "room"} 
+
+- intent: count
+  examples: |
+   - many
+   - much
+   - count
+   - total
+   - how many [person]{"entity": "person"} are [gesture]{"entity": "gestures"}
+   - how much [object category]{"entity": "object category"} in a [object]{"entity": "object"}
+   - count the number of [colour]{"entity": "colours"} [object]{"entity": "object"} on the [location]{"entity": "location"}
+   - total how many number of [attribute]{"entity": "attributes"} [location]{"entity": "object"} are there in the [rm]{"entity": "room"}
+   - how many [attribute]{"entity": "attributes"} are [gesture]{"entity": "gestures"} on [location]{"entity": "location"}
+   - count the [person]{"entity": "person"} that are [gesture]{"entity": "gestures"} on the [location]{"entity": "location"}
+
+- intent: request
+  examples: |
+    - ask [person]{"entity": "person"}
+    - tell [person]{"entity": "person"}
+    - could [myself]{"entity": "myself"} please
+    - can [myself]{"entity": "myself"} 
+    - please tell
+    - request
+    - please
+
+- lookup: object
+  examples: |
+    - it
+    - objects
+    - apple
+    - bag
+    - basket
+    - bowl
+    - bottle
+    - cloth
+    - cup
+    - cascade pot
+    - chocolate
+    - crackers    
+    - coke
+    - cereal
+    - cereal
+    - dish                
+    - fork    
+    - grape juice    
+    - knife
+    - milk
+    - noodles
+    - orange juice
+    - orange
+    - paprika
+    - pringles
+    - potato chips
+    - spoon
+    - sprite
+    - sausages
+    - scrubby
+    - sponge
+    - tray
+
+- lookup: object category
+  examples: |
+    - objects categories
+    - cleaning stuff
+    - cutlery
+    - drinks
+    - fruits
+    - food
+    - tableware
+
+- lookup: location
+  examples: |
+    - location
+    - bookcase
+    - bed
+    - couch
+    - cupboard
+    - counter
+    - dishwasher
+    - desk
+    - exit
+    - entrance
+    - end table
+    - floor
+    - storage table
+    - side table
+    - sink
+    - oven
+
+- lookup: room
+  examples: |
+    - bedroom
+    - corridor
+    - dining room
+    - kitchen
+    - living room
+
+- lookup: person
+  examples: |
+    - me
+    - him
+    - her
+    - woman
+    - women
+    - man
+    - men
+    - girl
+    - girls
+    - boys
+    - boy
+    - children
+    - child
+    - lady
+    - people
+    - person
+
+- lookup: person name
+  examples: |
+    - person name
+    - alex
+    - charlie
+    - elizabeth
+    - francis
+    - jennifer
+    - linda
+    - patricia
+    - robin
+    - skyler
+    - john
+    - james
+    - michael
+    - robert
+    - wiliam
+
+- lookup: gestures
+  examples: |
+    - gesture
+    - waving
+    - raising left arm
+    - raising right arm
+    - pointing to the right
+    - pointing to the left
+    - lying down
+    - sitting
+    - standing
+    - talking
+
+- lookup: myself
+  examples: |
+    - robot
+    - robo
+    - you
+
+- lookup: number
+  examples: |
+    - one
+    - two
+    - three
+    - four
+    - five
+    - six
+    - seven
+    - eight
+    - nine
+    - ten
+
+- lookup: attributes
+  examples: |
+    - attribute
+    - heavy
+    - heaviest
+    - small
+    - smallest
+    - big
+    - biggest
+    - tall
+    - tallest
+    - younger
+    - youngest
+    - older
+    - oldest
+    - fattest
+    - fat
+    - left most
+    - right most
+    - left
+    - right
+    - top
+    - bottom
+
+- lookup: colours
+  examples: |
+    - red
+    - blue
+    - yellow
+    - green
+    - white
+    - black
+ 
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - meet [person name]{"entity": "person name"} in the [rm]{"entity": "room"}
+    - greet [person]{"entity": "person"} at the [location]{"entity": "location"}
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
