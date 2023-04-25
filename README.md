@@ -7,7 +7,7 @@ https://rasa.com/docs/rasa/training-data-format/
 you can add data by making changes in data/nlu.yml and domain.yml
 
 #### new plans
-add intent: (title of the plan) in data/nlu.yml and also the update the domain.yml with new intent. Then add some examples.
+add intent: (title of the plan) in data/nlu.yml and also update the domain.yml with new intent. Then add some examples.
 Try to add synonyms of the word first without enttites and then make examples using entities (To avoid data biasing)
 
 ```
@@ -21,6 +21,6 @@ Try to add synonyms of the word first without enttites and then make examples us
 #### new entities
 you can specify new entities by making examples in the intent data/nlu.yml. 
 [object category]{"entity": "object category"}
-here "object category" is the title of the entities where [object category]
+here "object category" is the title of the entities where [object category] is the
 
 
