@@ -3,7 +3,7 @@
 ### Data formate
 https://rasa.com/docs/rasa/training-data-format/
 
-### For GPSR challange how to add words
+### For GPSR challange how to new vocabulary
 you can add data by making changes in data/nlu.yml and domain.yml
 
 #### new plans
