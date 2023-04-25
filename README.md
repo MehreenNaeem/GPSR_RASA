@@ -23,4 +23,6 @@ you can specify new entities by making examples in the intent data/nlu.yml.
 [object category]{"entity": "object category"}
 here "object category" is the title of the entities where [object category] is the
 
-
+TODO
+-- train the model after making changes
+-- config file, domain, nlu
