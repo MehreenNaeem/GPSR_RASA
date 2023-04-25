@@ -36,8 +36,7 @@ Make sure to uppgrade the list of intents and entities in domain.yml when you en
 train the model after making changes in files. go into the rasa directory where files are defined and train the model
 ```
 rasa train
-```
-### testing
+```### testing
 In python 
 ```
 import json
