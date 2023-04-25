@@ -22,7 +22,14 @@ Try to add synonyms of the word first without enttites and then make examples us
 you can specify new entities by making examples in the intent data/nlu.yml.
 
 ```[object category]{"entity": "object category"}```
-Here "object category" is the title of the entities where [object category] is an element belongs to following entites
+Here "object category" is the title of the entities where [object category] is an element belongs to following entites. In order to avoid data biasing, lookup table is used to specify the elements of the entities (Avoid to enter direct element in entity examples). e.g to add elements in "object category" its lookup table is defined as:
+```
+- lookup: object category
+  examples: |
+    - cutlery
+    - drinks
+    - fruits
+```
 
 
 TODO
