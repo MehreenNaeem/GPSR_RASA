@@ -30,11 +30,16 @@ Here "object category" is the title of the entities where [object category] is a
     - drinks
     - fruits
 ```
+Make sure to uppgrade the list of intents and entities in domain.yml when you enter new intent or entity in nlu.yml.
 
-TODO
--- train the model after making change... train-> go in the directory
--- config file, domain, nlu
--- testing in python:
+### training
+train the model after making changes in files. go into the rasa directory where files are defined and train the model
+```
+rasa train
+```
+### testing
+In python 
+```
 import json
 import requests
     def rasa_response(text):
@@ -43,3 +48,4 @@ import requests
         response = json.loads(r.text)
         return response
 rasa_response('hi')
+```
