@@ -19,10 +19,21 @@ Try to add synonyms of the word first without enttites and then make examples us
     - search for the[person]{"entity": "person"} [gesture]{"entity": "gestures"} her hand at the [location]{"entity": "location"}
 ```
 #### new entities
-you can specify new entities by making examples in the intent data/nlu.yml. 
-[object category]{"entity": "object category"}
-here "object category" is the title of the entities where [object category] is the
+you can specify new entities by making examples in the intent data/nlu.yml.
+
+```[object category]{"entity": "object category"}```
+Here "object category" is the title of the entities where [object category] is an element belongs to following entites
+
 
 TODO
--- train the model after making changes
+-- train the model after making change... train-> go in the directory
 -- config file, domain, nlu
+-- testing in python:
+import json
+import requests
+    def rasa_response(text):
+        req = {"text": text}
+        r = requests.post("http://localhost:5005/model/parse", data=bytes(json.dumps(req), "utf-8"))
+        response = json.loads(r.text)
+        return response
+rasa_response('hi')
