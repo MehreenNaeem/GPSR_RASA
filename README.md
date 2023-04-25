@@ -31,7 +31,6 @@ Here "object category" is the title of the entities where [object category] is a
     - fruits
 ```
 
-
 TODO
 -- train the model after making change... train-> go in the directory
 -- config file, domain, nlu
