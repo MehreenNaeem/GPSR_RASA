@@ -37,7 +37,6 @@ train the model after making changes in files. go into the rasa directory where 
 ```
 rasa train
 ```
-
 ### testing
 In python 
 ```
