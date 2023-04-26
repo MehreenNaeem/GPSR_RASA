@@ -46,6 +46,7 @@ import requests
         req = {"text": text}
         r = requests.post("http://localhost:5005/model/parse", data=bytes(json.dumps(req), "utf-8"))
         response = json.loads(r.text)
+        print(response)
         return response
 rasa_response('hi')
 ```
