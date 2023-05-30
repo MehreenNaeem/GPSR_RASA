@@ -129,7 +129,7 @@ nlu:
 - lookup: object
   examples: |
     - it
-    - objects
+    - object
     - apple
     - bag
     - basket
@@ -149,10 +149,11 @@ nlu:
     - knife
     - milk
     - noodles
-    - orange juice
+    - orangejuice
     - orange
     - paprika
     - pringles
+    - plate
     - potato chips
     - spoon
     - sprite
@@ -160,15 +161,19 @@ nlu:
     - scrubby
     - sponge
     - tray
+    - juice
+
 
 - lookup: object category
   examples: |
     - objects categories
     - cleaning stuff
     - cutlery
+    - container
     - drinks
     - fruits
     - food
+    - snacks
     - tableware
 
 - lookup: location
@@ -274,6 +279,8 @@ nlu:
     - heaviest
     - small
     - smallest
+    - large
+    - largest
     - big
     - biggest
     - tall
@@ -284,8 +291,6 @@ nlu:
     - oldest
     - fattest
     - fat
-    - left most
-    - right most
     - left
     - right
     - top
