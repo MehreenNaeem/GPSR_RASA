@@ -47,7 +47,7 @@ nlu:
     - transport
     - retrive
     - bring some [objects]{"entity": "object"} to the [person name]{"entity": "person name"} in a [rm]{"entity": "room"}
-    - bring the [containers]{"entity": "object category"} to the [person]{"entity": "person"}
+    - bring the [containers]{"entity": "object category"} to the [attribute]{"entity": "attributes"} [person]{"entity": "person"}
     - transport [colour]{"entity": "colours"} [object]{"entity": "object"} from [location]{"entity": "location"} to [location]{"entity": "location"} in a [rm]{"entity": "room"}
 
 - intent: guide
@@ -57,6 +57,7 @@ nlu:
     - escort
     - assist
     - take
+    - guide [person]{"entity": "person"} from the [location]{"entity": "location"} to [location]{"entity": "location"}
     - guide [person]{"entity": "person"} towards [rm]{"entity": "room"} 
     - accompany [person]{"entity": "person"} [gesture]{"entity": "gestures"} in a [rm]{"entity": "room"} to the [location]{"entity": "location"}
     - escort [person]{"entity": "person"} [gesture]{"entity": "gestures"} to the [rm]{"entity": "room"}
@@ -69,7 +70,7 @@ nlu:
     - follow
     - follow [person]{"entity": "person"} from the [location]{"entity": "location"}
     - go with [person name]{"entity": "person name"} to the [location]{"entity": "location"}
-    - go along with [person name]{"entity": "person name"} to the [location]{"entity": "location"}
+    - go along with [person name]{"entity": "person name"} to the [rm]{"entity": "room"}
 
 - intent: navigate
   examples: |
@@ -95,7 +96,7 @@ nlu:
     - check
     - find the [colour]{"entity": "colours"} [object]{"entity": "object"} in the [rm]{"entity": "room"}
     - search for the [attribute]{"entity": "attributes"} [person]{"entity": "person"} [gesture]{"entity": "gestures"} her hand at the [location]{"entity": "location"}
-    - look for the [person]{"entity": "person"} in the [room]{"entity": "room"}
+    - look for the [person]{"entity": "person"} in the [rm]{"entity": "room"}
     - locate a [attribute]{"entity": "attributes"} [object]{"entity": "object"} on the [location]{"entity": "location"}
     - hunt for a [object]{"entity": "object"} in the [location]{"entity": "location"}
     - spot the [object]{"entity": "object"} on the [location]{"entity": "location"}
