@@ -15,7 +15,7 @@ intents:
   - follow
   - navigate
   - search
-  - request
+  - describe
   - count
 
 entities:
