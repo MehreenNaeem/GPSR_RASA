@@ -17,7 +17,7 @@ nlu:
     - take a [object]{"entity": "object"} from the [location]{"entity": "location"} 
     - pick [number]{"entity": "number"} minimum [object]{"entity": "object"} from [location]{"entity": "location"}
     - retrieve [object category]{"entity": "object category"}
-    - take [object]{"entity": "object"} from the [location]{"entity": "location"}
+    - take out [object]{"entity": "object"} from the [location]{"entity": "location"}
     - take the [object category]{"entity": "object category"}
 
 - intent: deliver
@@ -31,6 +31,7 @@ nlu:
     - handover
     - hand
     - deliver
+    - offer
     - give [object category]{"entity": "object category"} to [person]{"entity": "person"}
     - provide [attribute]{"entity": "attributes"} [object]{"entity": "object"} to [person name]{"entity": "person name"}
     - drop [object]{"entity": "object"} on the [location]{"entity": "location"}
@@ -40,6 +41,7 @@ nlu:
     - handover maximum [number]{"entity": "number"} [object category]{"entity": "object category"} from [location]{"entity": "location"} to [person]{"entity": "person"}
     - hand [person]{"entity": "person"} some [object]{"entity": "object"} in a [object]{"entity": "object"}
     - deliver a [colour]{"entity": "colours"} [object]{"entity": "object"} to [person name]{"entity": "person name"}
+    - offer some [object category]{"entity": "object category"} to the [person]{"entity": "person"}
 
 - intent: transport
   examples: |
@@ -79,11 +81,13 @@ nlu:
     - move
     - walk
     - travel
+    - face
     - navigate to the [rm]{"entity": "room"}
     - go to the [rm]{"entity": "room"}
     - move to the [location]{"entity": "location"}
     - walk towards [location]{"entity": "location"}
     - travel to the [rm]{"entity": "room"}
+    - face [person name]{"entity": "person name"} at the [location]{"entity": "location"}
 
 - intent: search
   examples: |
@@ -119,13 +123,13 @@ nlu:
 
 - intent: request
   examples: |
-    - ask [person]{"entity": "person"}
-    - tell [person]{"entity": "person"}
-    - could [myself]{"entity": "myself"} please
-    - can [myself]{"entity": "myself"} 
+    - ask [person]{"entity": "person"} about [attribute]{"entity": "attributes"}
+    - tell about [attribute]{"entity": "attributes"} to the [person]{"entity": "person"}
+    - tell [person]{"entity": "person"} which are the [attribute]{"entity": "attributes"} [object category]{"entity": "object category"}
     - please tell
     - request
     - please
+    - describe
 
 - lookup: object
   examples: |
@@ -162,6 +166,7 @@ nlu:
     - scrubby
     - sponge
     - tray
+    - trash
     - juice
 
 
@@ -186,6 +191,7 @@ nlu:
     - cupboard
     - counter
     - dishwasher
+    - dining table
     - desk
     - exit
     - entrance
@@ -292,10 +298,14 @@ nlu:
     - oldest
     - fattest
     - fat
+    - yourself
     - left
     - right
     - top
     - bottom
+    - gender
+    - pose
+
 
 - lookup: colours
   examples: |
@@ -340,7 +350,6 @@ nlu:
 - intent: affirm
   examples: |
     - yes
-    - y
     - indeed
     - of course
     - that sounds good
@@ -349,7 +358,6 @@ nlu:
 - intent: deny
   examples: |
     - no
-    - n
     - never
     - I don't think so
     - don't like that
