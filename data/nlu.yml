@@ -59,6 +59,7 @@ nlu:
     - escort
     - assist
     - take
+    - conduct
     - guide [person]{"entity": "person"} from the [location]{"entity": "location"} to [location]{"entity": "location"}
     - guide [person]{"entity": "person"} towards [rm]{"entity": "room"} 
     - accompany [person]{"entity": "person"} [gesture]{"entity": "gestures"} in a [rm]{"entity": "room"} to the [location]{"entity": "location"}
@@ -66,6 +67,7 @@ nlu:
     - assist [attribute]{"entity": "attributes"} [person]{"entity": "person"} to the [rm]{"entity": "room"}
     - take [person name]{"entity": "person name"} to the [location]{"entity": "location"}
     - take [person]{"entity": "person"} to the [rm]{"entity": "room"}
+    - conduct [person]{"entity": "person"} at the [location]{"entity": "location"} to the [rm]{"entity": "room"}
 
 - intent: follow
   examples: |
@@ -82,12 +84,14 @@ nlu:
     - walk
     - travel
     - face
+    - enter
     - navigate to the [rm]{"entity": "room"}
     - go to the [rm]{"entity": "room"}
     - move to the [location]{"entity": "location"}
     - walk towards [location]{"entity": "location"}
     - travel to the [rm]{"entity": "room"}
     - face [person name]{"entity": "person name"} at the [location]{"entity": "location"}
+    - enter to the [rm]{"entity": "room"}
 
 - intent: search
   examples: |
@@ -98,6 +102,7 @@ nlu:
     - hunt
     - spot
     - check
+    - pinpoint
     - find the [colour]{"entity": "colours"} [object]{"entity": "object"} in the [rm]{"entity": "room"}
     - search for the [attribute]{"entity": "attributes"} [person]{"entity": "person"} [gesture]{"entity": "gestures"} her hand at the [location]{"entity": "location"}
     - look for the [person]{"entity": "person"} in the [rm]{"entity": "room"}
@@ -106,7 +111,8 @@ nlu:
     - spot the [object]{"entity": "object"} on the [location]{"entity": "location"}
     - check where is [person name]{"entity": "person name"} in the [rm]{"entity": "room"}
     - retrieve [attribute]{"entity": "attributes"} [location]{"entity": "object"} from the [location]{"entity": "location"} to [person]{"entity": "person"}
-    - spot the [object]{"entity": "object"} in the [rm]{"entity": "room"} 
+    - spot the [object]{"entity": "object"} in the [rm]{"entity": "room"}
+    - pinpoint [person name]{"entity": "person name"} 
 
 - intent: count
   examples: |
@@ -121,15 +127,23 @@ nlu:
    - how many [attribute]{"entity": "attributes"} are [gesture]{"entity": "gestures"} on [location]{"entity": "location"}
    - count the [person]{"entity": "person"} that are [gesture]{"entity": "gestures"} on the [location]{"entity": "location"}
 
-- intent: request
+- intent: describe
   examples: |
-    - ask [person]{"entity": "person"} about [attribute]{"entity": "attributes"}
-    - tell about [attribute]{"entity": "attributes"} to the [person]{"entity": "person"}
-    - tell [person]{"entity": "person"} which are the [attribute]{"entity": "attributes"} [object category]{"entity": "object category"}
+    - ask
+    - tell about
+    - speak
     - please tell
     - request
     - please
     - describe
+    - discuss
+    - introduce
+    - ask [person]{"entity": "person"} about [attribute]{"entity": "attributes"}
+    - tell about [attribute]{"entity": "attributes"} to the [person]{"entity": "person"}
+    - tell [person]{"entity": "person"} which are the [attribute]{"entity": "attributes"} [object category]{"entity": "object category"}
+    - describe [objects]{"entity": "object"} in the [location]{"entity": "location"} to [person]{"entity": "person"}
+    - speak about [objects]{"entity": "object"}
+    - discuss about [objects]{"entity": "object"}
 
 - lookup: object
   examples: |
