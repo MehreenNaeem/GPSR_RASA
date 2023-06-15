@@ -83,14 +83,12 @@ nlu:
     - move
     - walk
     - travel
-    - face
     - enter
     - navigate to the [rm]{"entity": "room"}
     - go to the [rm]{"entity": "room"}
     - move to the [location]{"entity": "location"}
     - walk towards [location]{"entity": "location"}
     - travel to the [rm]{"entity": "room"}
-    - face [person name]{"entity": "person name"} at the [location]{"entity": "location"}
     - enter to the [rm]{"entity": "room"}
 
 - intent: search
@@ -103,6 +101,7 @@ nlu:
     - spot
     - check
     - pinpoint
+    - face
     - find the [colour]{"entity": "colours"} [object]{"entity": "object"} in the [rm]{"entity": "room"}
     - search for the [attribute]{"entity": "attributes"} [person]{"entity": "person"} [gesture]{"entity": "gestures"} her hand at the [location]{"entity": "location"}
     - look for the [person]{"entity": "person"} in the [rm]{"entity": "room"}
@@ -112,7 +111,8 @@ nlu:
     - check where is [person name]{"entity": "person name"} in the [rm]{"entity": "room"}
     - retrieve [attribute]{"entity": "attributes"} [location]{"entity": "object"} from the [location]{"entity": "location"} to [person]{"entity": "person"}
     - spot the [object]{"entity": "object"} in the [rm]{"entity": "room"}
-    - pinpoint [person name]{"entity": "person name"} 
+    - pinpoint [person name]{"entity": "person name"}
+    - face [person name]{"entity": "person name"} at the [location]{"entity": "location"} 
 
 - intent: count
   examples: |
